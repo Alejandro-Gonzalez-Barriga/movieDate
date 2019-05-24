@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "node server/index.js"
+    "server-dev": "nodemon server/index.js"
   },
   "author": "Alex G",
   "license": "none",
@@ -29,6 +29,7 @@
     "npm": "^6.9.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
     "style-loader": "^0.23.1"
   }
