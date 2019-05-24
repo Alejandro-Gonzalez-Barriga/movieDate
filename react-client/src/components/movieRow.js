@@ -17,4 +17,4 @@ class MovieRow extends React.Component{
   }
 }
 
-export default MovieRow
+export default MovieRow;
