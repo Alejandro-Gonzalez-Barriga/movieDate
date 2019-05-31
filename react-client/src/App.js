@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import $ from 'jquery';
 import  LogInForm from "./components/login.js";
+import  SignUpForm from "./components/signUp.js";
 import  LoggedOut from "./components/loggedOut.js";
 import Suggestions from "./components/suggestions.js";
 import MovieRow from './components/MovieRow.js';
@@ -56,11 +57,14 @@ class App extends React.Component {
         <NavLink to="/suggestions" >
           <button>Suggestions</button>
         </NavLink>
-        <NavLink to="/loggedout" >
+        <NavLink to="/signup" >
           <button>LogOut</button>
         </NavLink>
-        <NavLink to="/login" >
+        <NavLink to="/" >
           <button>LogIn</button>
+        </NavLink>
+        <NavLink to="/signup" >
+          <button>sing Up</button>
         </NavLink>
 
 
