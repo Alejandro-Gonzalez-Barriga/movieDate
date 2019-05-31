@@ -1,24 +1,26 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var login = require('../routes')
 var items = require('../database-mysql');
 
 
 var app = express();
-
-
-app.use(express.static(__dirname + '/../react-client/dist'));
-
-app.get('/items', function (req, res) {
-  items.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
 });
-
-app.listen(3003, function() {
-  console.log('listening on port 3003!');
+var router = express.Router();
+// test route
+router.get('/', function(req, res) {
+    res.json({ message: 'welcome to our upload module apis' });
+});
+//route to handle user registration
+router.post('/register',login.register);
+router.post('/login',login.login)
+app.use('/api', router);
+app.listen(3003, function(){
+  console.log('Listening on port 3003!');
 });

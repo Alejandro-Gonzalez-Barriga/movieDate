@@ -4,7 +4,7 @@ CREATE DATABASE movieDate;
 
 USE movieDate;
 
-CREATE TABLE `users` (
+CREATE TABLE  `users` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `first_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
  `last_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
