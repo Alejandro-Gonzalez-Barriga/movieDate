@@ -2,8 +2,8 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'your-password',
-  database : 'cloudprint'
+  password : 'thesis1',
+  database : 'thesis'
 });
 connection.connect(function(err){
 if(!err) {
