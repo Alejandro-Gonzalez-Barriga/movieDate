@@ -29,7 +29,6 @@ class Home extends React.Component {
             <Route path="/suggestions" component={Suggestions} />
             <Route path="/termsofservice" component={TermsOfService} />
             <Route path="/loggedout" component={LoggedOut} />
-            <Route path="/stars" component={StarComp} />
             <Route component={Error} />
           </Switch>
         </div>
