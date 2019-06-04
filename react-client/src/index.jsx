@@ -7,7 +7,7 @@ import LogInForm from "./components/login.js";
 import SignUpForm from "./components/signUp.js";
 import LoggedOut from "./components/loggedout.js";
 import TermsOfService from "./components/termsOfService.js";
-import MovieRow from './components/MovieRow.js';
+import StarComp from './components/stars.js';
 import App from './App.js'
 
 
@@ -29,6 +29,7 @@ class Home extends React.Component {
             <Route path="/suggestions" component={Suggestions} />
             <Route path="/termsofservice" component={TermsOfService} />
             <Route path="/loggedout" component={LoggedOut} />
+            <Route path="/stars" component={StarComp} />
             <Route component={Error} />
           </Switch>
         </div>
