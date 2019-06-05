@@ -77,12 +77,6 @@ class App extends React.Component {
         <NavLink to="/signup" >
           <button>LogOut</button>
         </NavLink>
-        <NavLink to="/" >
-          <button>LogIn</button>
-        </NavLink>
-        <NavLink to="/signup" >
-          <button>sing Up</button>
-        </NavLink>
 
 
         <table style = {{
