@@ -6,36 +6,43 @@ import  SignUpForm from "./components/signUp.js";
 import  LoggedOut from "./components/loggedOut.js";
 import Suggestions from "./components/suggestions.js";
 import MovieRow from './components/MovieRow.js';
+import StarComp from './components/stars.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      output:[]
+    }
 
-    this.performSearch("pulp fiction")
+    this.performSearch("saw")
   }
 
   performSearch(searchTerm) {
-    console.log("Perform search using moviedb")
+    //console.log("Perform search using moviedb")
     const urlString = "https://api.themoviedb.org/3/search/movie?api_key=f625a4c9c70738cb426587659396e88b&query=" + searchTerm
     $.ajax({
       url: urlString,
+      contentType: 'application/json',
       success: (searchResults) => {
-        console.log("Fetched data successfully")
-        // console.log(searchResults)
-        const results = searchResults.results
-        // console.log(results[0])
+        //console.log("Fetched data successfully")
+         //console.log("iiiiiiiiiiiiii "+typeof searchResults.results)
+        const result = searchResults.results
+
+        this.setState({output : result})
+        // console.log("i am the movie id: "+result)
 
         var movieRows = []
 
-        results.forEach((movie) => {
+
+        result.forEach((movie) => {
           movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path
           // console.log(movie.poster_path)
           const movieRow = <MovieRow key={movie.id} movie={movie}/>
           movieRows.push(movieRow)
         })
 
-        this.setState({rows: movieRows})
+        this.setState({rows: movieRows , output : searchResults})
       },
       error: (xhr, status, err) => {
         console.error("Failed to fetch data")
@@ -51,6 +58,16 @@ class App extends React.Component {
   }
 
   render() {
+     const {output} = this.state
+ for(var i =0; i < output.length ; i++){
+   console.log(output[i].id);
+   //console.log(output[i]);
+ }
+    // Object.keys(output).map(function(key, index){
+    //   console.log("i am a key : "+index);
+    // })
+    //console.log(typeof this.state.output);
+    //console.log("iiiiiiiiiiiiiiiii"+ this.state.output[0]);
     return (
 
       <div>
