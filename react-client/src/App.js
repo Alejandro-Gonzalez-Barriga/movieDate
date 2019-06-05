@@ -58,11 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-     const {output} = this.state
- for(var i =0; i < output.length ; i++){
-   console.log(output[i].id);
-   //console.log(output[i]);
- }
+
     // Object.keys(output).map(function(key, index){
     //   console.log("i am a key : "+index);
     // })

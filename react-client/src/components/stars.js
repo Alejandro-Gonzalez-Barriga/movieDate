@@ -15,15 +15,17 @@ class StarComp extends Component {
 
   onStarClick(nextValue, prevValue, name) {
     this.setState({rating: nextValue});
-    console.log(nextValue)
+    //console.log(nextValue)
+    //console.log(rating)
     //console.log(this.props.searchResults)
   }
 
   render() {
     const { rating } = this.state;
     const { output } = this.props;
-    //console.log("i am in render" +this.state.rating);
-    //console.log(output)
+    console.log("i am movie rating " +this.state.rating);
+    console.log("i am movie id "+ this.props.linkId);
+    const
     return (
       <div>
         <h3>You rated this movie {rating} out of 5 stars!</h3>
@@ -32,6 +34,7 @@ class StarComp extends Component {
           starCount={5}
           value={rating}
           onStarClick={this.onStarClick.bind(this)}
+          rate={output}
         />
       </div>
     );
