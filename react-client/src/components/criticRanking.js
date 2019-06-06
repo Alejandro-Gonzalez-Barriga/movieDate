@@ -15,7 +15,7 @@ for(var others in dataset){
         score.push(scores[i]);
     }
 
-    similar_user(dataset,'Jack Matthews',3,pearson_correlation);
+    similar_user(dataset,'Alex G',3,pearson_correlation);
 //[ { val: 0.963795681875635, p: 'Gene Seymour' },
   { val: 0.7470178808339965, p: 'Lisa Rose' },
   { val: 0.66284898035987, p: 'Toby' } ]

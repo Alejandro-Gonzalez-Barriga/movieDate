@@ -15,7 +15,7 @@ class App extends React.Component {
       output:[]
     }
 
-    this.performSearch("saw")
+    this.performSearch("pulp fiction")
   }
 
   performSearch(searchTerm) {
