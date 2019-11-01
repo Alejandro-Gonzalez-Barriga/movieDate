@@ -1,5 +1,5 @@
 {
-  "name": "thesis_movieDate",
+  "name": "movieDate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.23.0",
+    "babel-preseyt-react": "^6.23.0",
     "css-loader": "^2.1.1",
     "webpack": "^2.7.0"
   },
